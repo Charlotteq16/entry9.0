@@ -1,0 +1,279 @@
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.next{
+    color: rgb(0, 0, 0);
+    font-size: xx-large;
+    position:absolute;
+    right: 5%;
+    top: 200%;
+}
+
+.homepage{
+    color: rgb(0, 0, 0);
+    font-size: xx-large;
+    position:absolute;
+    left: 45%;
+    top: 200%;
+}
+
+.previous{
+    color: rgb(0, 0, 0);
+    font-size: xx-large;
+    position:absolute;
+    left: 5%;
+    top: 200%;
+}
+
+body {
+    background-color:rgb(163, 97, 97);
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-top: 3%;
+    transition: background-color 0.3s ease; 
+}
+
+.image{
+    border: dashed rgb(0, 0, 0);
+    border-width: 10px;
+    height: 730px;
+    width: 50%;
+}
+
+
+.bw-image{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; 
+    position: absolute;
+    top: 125%;
+}
+
+
+.number9{
+    position: absolute;
+    top: 2%;
+    right: 2%;
+    font-size:xx-large;
+    background-color: rgb(255, 255, 255);
+    border: solid rgb(0, 0, 0);
+    border-width: 5px;
+}
+
+.info-word{
+    font-size: 500%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    position: absolute;
+    top: 110%;
+}
+
+.INFO-CONTAINER {
+    font-size: 500%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    position: absolute;
+    top: 120%;
+    width: 50%;
+    height: .5%;
+    background-color: whitesmoke;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 0px;
+    border: solid;
+    border-width: 10px;
+    animation-name: AnimateBorder;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+}
+
+@keyframes AnimateBorder{
+    50%{ border-color:rgb(161, 12, 7);}
+    100%{border-color:rgb(231, 116, 116);}
+  }
+
+  .INFO-CONTAINER:hover {
+    transition: width 3s, height 3s, opacity 2s;
+    height: 58%;
+    font-size: 35px;
+    flex: 4;
+
+    /* Trigger the Knife animation on hover */
+    .knife {
+        animation-name: Knife;
+        animation-duration: 3s;
+        animation-iteration-count: 1;
+    }
+}
+
+.thoughts-container:hover {
+    transition: width 3s, height 3s, opacity 2s;
+    height: 58%;
+    font-size: 35px;
+    flex: 4;
+
+    /* Trigger the Knife animation on hover */
+    .knife2 {
+        animation-name: Knife2;
+        animation-duration: 3s;
+        animation-iteration-count: 1;
+    }
+}
+
+.information{
+width: 90%;
+position:relative;
+left: 5%;
+top: 1%;
+}
+
+.thoughts{
+width: 95%;
+position:relative;
+left: 1%;
+top:.5%;
+}
+
+.thoughts-word{
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    position: absolute;
+    top: 182%;
+    right:35%;
+        font-size: 500%;
+}
+
+.thoughts-container{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    position: absolute;
+    bottom: -80%;
+    width: 50%;
+    height: 1%; 
+    background-color: whitesmoke;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 0px;
+    border: solid;
+    border-width: 10px;
+    animation-name: AnimateBorder;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    transform-origin: top; 
+}
+
+.thoughts-container:hover{
+transition: width 3s, height 3s, opacity 2s;
+height: 58%;
+font-size: 20px; 
+}
+
+.knife {
+    transform: rotate(260deg);
+    position: absolute;
+    top: 100%;
+    right: 1%;
+    transition: right 1s ease; 
+     opacity: 0;
+}
+
+@keyframes Knife{
+    0%{ right: 1%; opacity: 1;}
+    100%{ right: 100%; opacity: 1;} 
+  }
+
+  .INFO-CONTAINER:hover ~ .knife {
+    animation-name: Knife;
+    animation-duration: 2.5s;
+    animation-iteration-count: 1;
+}
+
+.knife2{
+    transform: rotate(260deg);
+    position: absolute;
+    bottom: -81%;
+    left: 1%;
+    transition: right 1s ease; 
+    opacity: 0;
+}
+
+@keyframes Knife2{
+    0%{ left: 1%; opacity: 1;}
+    100%{ left: 100%; opacity: 1;} 
+  }
+
+.thoughts-container:hover ~ .knife2 {
+    animation-name: Knife2;
+    animation-duration: 2.5s;
+    animation-iteration-count: 1;
+}
+
+
+
+@media screen and (max-width: 1400px){
+    .image{
+      width: 57%;
+      height: 90%;
+    }
+
+    #text-container{
+      width: 57%;
+      height: auto;
+    }
+
+    .thoughts-container:hover{
+      font-size: 20px;
+    }
+
+  }
+
+  @media screen and (max-width: 1200px){
+
+    .thoughts-container:hover{
+      font-size: 14px;
+    }
+
+    .image{
+        width: 75%;
+        height: 90%;
+      }
+
+  }
+
+
+
+  @media screen and (max-width :600px){
+
+    .image{
+        width: 75%;
+        height: 100%;
+      }
+
+
+    .INFO-CONTAINER:hover{
+      font-size: 30px;
+    }
+
+    .thoughts-container:hover{
+      font-size: 13px;
+    }
+
+    .info-word{
+      font-size: 400%;
+    }
+
+    .thoughts-word{
+      font-size: 400%;
+      right: 18%;
+    }
+
+  }
+    
